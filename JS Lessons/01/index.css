@@ -1,0 +1,35 @@
+#over{
+    width: 230px;
+    margin: 0px auto; 
+    
+}
+
+#emailDiv{
+    width: 100px;
+    margin: 5px;
+
+}
+#passwordDiv{
+    margin: 5px;
+}
+
+#label{
+    float: left;
+    margin-top: 10px;
+    
+}
+
+#login{
+    float: right;
+    margin-right: 25px;
+    margin-top: 10px;
+    
+}
+#checkbox{
+    float: left;
+    height: 23px;
+}
+
+#labelDiv{
+    width: 250px;
+}

@@ -1,0 +1,34 @@
+
+<link rel="stylesheet" href="index.css">
+<div id="over">
+    <div id="emailDiv">
+        <label for="">Email:</label>
+        <input type="text" id="inputE">
+    </div>
+    
+    <div id="passwordDiv">
+        <label for="">Password:</label>
+        <input type="text" id="inputP">
+    </div>
+
+    <div id="labelDiv">
+        <label id="label"><input type="checkbox" id="checkbox"/>remember me</label>   
+        <button id="login">Log in</button>
+    </div>
+</div>
+
+<script>
+    var loginButton = document.getElementById('login');
+loginButton.onclick = function() {
+
+    var inputE = document.getElementById('inputE');
+    var inputP = document.getElementById('inputP');
+    var checkboxId = document.getElementById('checkbox');
+
+    window.alert(inputE.value);
+    window.alert(inputP.value);
+    window.alert(checkboxId.value);
+
+};
+
+</script>

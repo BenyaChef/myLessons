@@ -1,0 +1,8 @@
+.last-name-input{
+    border: 3px green solid;
+    padding: 5px;
+}
+
+.error-input{
+    border-color: red;
+}

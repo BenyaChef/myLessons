@@ -1,0 +1,11 @@
+.error{
+    border: red 2px solid;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: inline;
+}

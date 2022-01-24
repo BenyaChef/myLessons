@@ -1,0 +1,68 @@
+<div id="over">
+    <div id="right">
+        <label for="">First name
+            <p><input type="text" value="Maxim" id="firs-name"></p>
+        </label>
+        <label for="">Second name
+            <p><input type="text" value="Bineckiy" id="last-name"></p>
+        </label>
+            <p>Cyti:</p>
+            <select name="" id="city-list">
+                <option>Minsk</option>
+                <option>Kiev</option>
+                <option selected>Moscow</option>
+            </select>
+            <p>About me</p>
+         
+
+        
+        <textarea name="" id="aboutMe" cols="30" rows="10">Hello, I'm Max, I'm learning JS</textarea>
+    </div>
+
+    <p>
+        <img id="imgId" src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/1345014/95e44cfe0abaddb03e43181d31a9f788/960x540"
+            alt="" style="width: 150px;">
+    </p>
+    <label for="">Sex
+        <p><input type="radio">M<input type="radio">F</p>
+    </label>
+    <label for="">Single <input type="checkbox"></label>
+    <p><button id="buttom">Кнопка</button></p>
+
+</div>
+<script>
+    function rollImg(elementId){
+        var imageId = document.getElementById('imgId');
+        imageId.src = 'https://www.interfax.ru/ftproot/photos/photostory/2019/07/09/week4_700.jpg';
+    }
+
+    setTimeout(function () {
+        var firstNameEl = document.getElementById('firs-name');
+        var lastNameEl = document.getElementById('last-name');
+        var cityListEl = document.getElementById('city-list');
+        var aboutMeEl = document.getElementById('aboutMe');
+        firstNameEl.value = 'Alena';
+        lastNameEl.value = 'Bineckay';
+        cityListEl.value = 'Minsk';
+        aboutMeEl.value = 'I"m home work';
+
+    }, 4000);
+    var buttomEl = document.getElementById('buttom');
+    buttomEl.addEventListener("click", function() {
+        setTimeout(function () {
+        rollImg();
+    }, 4000);
+});
+
+
+</script>
+<style>
+    #right {
+        float: right;
+    }
+
+    #over {
+        margin: 0 auto;
+        width: 500px;
+    }
+</style>

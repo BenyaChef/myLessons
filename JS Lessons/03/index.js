@@ -109,8 +109,10 @@ function deletElement(elemetParameter){
 function changeClassName(id, className){
     var element = document.getElementById(id, className);
     element = id;
+    if (element != null) {
     element.className = className;
+    }
 }
 
 
-changeClassName(aboutMeEl, 'error');
+changeClassName(aboutMeEl, 'hide-element');

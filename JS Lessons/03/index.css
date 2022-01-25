@@ -9,3 +9,12 @@
 .show{
     display: inline;
 }
+
+.aboutMeTo {
+    width: 0px;
+}
+
+.hide-element {
+    transition: 2s;
+    width: 1000px;
+}

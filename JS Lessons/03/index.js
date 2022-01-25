@@ -116,3 +116,19 @@ function changeClassName(id, className){
 
 
 changeClassName(aboutMeEl, 'hide-element');
+
+var arrayFinde = [input1El, input2El, input3El, myHeadEl, aboutMeEl];
+
+for (var i = 0; i < arrayFinde.length; i++) {
+     if (arrayFinde[i].value === "2") {
+        arrayFinde[i].remove();
+     }
+
+}
+
+for (var i = 0; i < arrayFinde.length; i++) {
+    if (arrayFinde[i].value === "3") {
+       arrayFinde[i].remove();
+    }
+
+}

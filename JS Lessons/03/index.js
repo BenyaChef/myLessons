@@ -119,8 +119,8 @@ changeClassName(aboutMeEl, 'hide-element');
 
 var arrayFinde = [input1El, input2El, input3El, myHeadEl, aboutMeEl];
 
-function elementRemove(valueForDelete ) {
-    
+function elementRemove(valueForDelete) {
+
     for (var i = 0; i < arrayFinde.length; i++) {
         if (arrayFinde[i].value === valueForDelete) {
             arrayFinde[i].remove();
@@ -131,4 +131,28 @@ function elementRemove(valueForDelete ) {
     }
 }
 
+function elementClassRemove() {
+    for (let i = 0; i < arrayFinde.length; i++) {
+        if (arrayFinde[i].className === "hey") {
+            arrayFinde[i].remove();
+        }
+    }
+
+}
+
+
 elementRemove("");
+//elementClassRemove();
+
+function hasClassHey(tagName) {
+    var el = table.getElementsByTagName(tagName);
+    el = tagName;
+    if (el.className === "hey") {
+        console.log("true");
+    } else {
+        console.log("false");
+    }
+
+}
+
+hasClassHey("input");

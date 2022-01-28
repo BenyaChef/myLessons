@@ -108,14 +108,13 @@ function deletElement(elemetParameter) {
 
 function changeClassName(id, className) {
     var element = document.getElementById(id);
-    element = id;
-    if (element != null) {
+    if (element !== null && element !== undefined) {
         element.className = className;
     }
 }
 
-
-changeClassName(aboutMeEl, 'hide-element');
+var idElemetHTML = 'aboutMe';
+changeClassName(idElemetHTML, 'hide-element');
 
 var arrayFinde = [input1El, input2El, input3El, myHeadEl, aboutMeEl];
 
@@ -156,3 +155,10 @@ function hasClassHey(tagName) {
 }
 
 hasClassHey("textarea");
+
+function changeClassName2(id, className) {
+    var element = document.getElementById(id);
+    console.log(element);
+}
+
+changeClassName2('input1','hey');

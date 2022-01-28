@@ -107,7 +107,7 @@ function deletElement(elemetParameter) {
 //deletElement(aboutMeEl);
 
 function changeClassName(id, className) {
-    var element = document.getElementById(id, className);
+    var element = document.getElementById(id);
     element = id;
     if (element != null) {
         element.className = className;
@@ -146,7 +146,6 @@ elementRemove("");
 
 function hasClassHey(tagName) {
     var el = document.getElementsByTagName(tagName);
-    el = tagName;
     for (var i = 0; i < el.length; i++) {
         if (el[i].className === "hey") {
             console.log("true");
@@ -156,4 +155,4 @@ function hasClassHey(tagName) {
     }
 }
 
-hasClassHey("input");
+hasClassHey("textarea");

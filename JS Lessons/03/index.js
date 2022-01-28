@@ -144,15 +144,14 @@ function elementClassRemove() {
 elementRemove("");
 //elementClassRemove();
 
-function hasClassHey(tagName) {
-    var el = table.getElementsByTagName(tagName);
-    el = tagName;
-    if (el.className === "hey") {
-        console.log("true");
-    } else {
-        console.log("false");
+function hasClassHey(el) {
+    var el = document.getElementsByTagName("tagName");
+    el = "tagName";
+    for (let i = 0; i < el.length; i++) {
+        if (el[i].className === "hey") {
+            console.log("true");
+        } 
     }
-
 }
 
 hasClassHey("input");

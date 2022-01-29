@@ -154,11 +154,30 @@ function hasClassHey(tagName) {
     }
 }
 
-hasClassHey("textarea");
+hasClassHey("input");
 
-function changeClassName2(id, className) {
-    var element = document.getElementById(id);
-    console.log(element);
+function predicat(tagName) {
+    var el = document.getElementsByTagName(tagName);
+    for (var i = 0; i < el.length; i++) {
+    if (el[i].className === 'hey') {
+        return true;
+    } else {
+        return false;
+    }
+    }
+    
 }
 
-changeClassName2('input1','hey');
+
+function removeElementIfConditionsTrue(arr, foo) {
+    var el = document.getElementsByTagName(arr)
+    for (var i = 0; i < el.length; i++) {
+        foo(el[i]);
+    } if (el[i] === true) {
+          el[i].remove();
+    }
+}
+
+var elements = ['input', 'div', 'textarea'];
+
+removeElementIfConditionsTrue(elements, predicat);

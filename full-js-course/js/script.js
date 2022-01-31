@@ -1,25 +1,15 @@
 "use strict";
+ //alert('Hello!');
 
-let number = 4.6;
+// const result = confirm('Are you here?');
+// console.log(result);
 
+//const answer = prompt('Вам есть 18?', '18');
 
-const persone = 'Max';
+const answers = [];
 
-const bool = true;
+ answers[0] = prompt('Как ваше имя?', '');
+ answers[1] = prompt('Как ваше фамилия?', '');
+ answers[2] = prompt('Сколько вам лет?', '');
 
-
-
-let und;
-
-console.log(und);
-
-const obj = {
-    name: 'Max',
-    age: 32,
-    isMarrieed: true
-};
-
-console.log(obj.isMarrieed);
-
-let arr = ['plum.png', 'orange.jpg', 'apple.bmp'];
-console.log(arr[2]);
+console.log(answers);

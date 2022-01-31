@@ -34,9 +34,9 @@ function setMyLastNameToAllInputs() {
 
 function changeValue(newValue) {
 
-    input1El.value = newValue
-    input2El.value = newValue
-    input3El.value = newValue
+    input1El.value = newValue;
+    input2El.value = newValue;
+    input3El.value = newValue;
 }
 
 function setError(elemetParameter) {
@@ -131,7 +131,7 @@ function elementRemove(valueForDelete) {
 }
 
 function elementClassRemove() {
-    for (let i = 0; i < arrayFinde.length; i++) {
+    for (var i = 0; i < arrayFinde.length; i++) {
         if (arrayFinde[i].className === "hey") {
             arrayFinde[i].remove();
         }
@@ -154,24 +154,28 @@ function hasClassHey(tagName) {
     }
 }
 
-hasClassHey("input");
+//hasClassHey("input");
 
 function predicat(tagName) {
-    var el = document.getElementsByTagName(tagName); {
-        for (var i = 0; i < el.length; i++) {
-            if (el[i].className === 'hey') {
-            } return true;
-
-        }
+    var el = document.getElementsByTagName(tagName);
+    if (el.className === 'hey') {
+        console.log(el.className);
+        return true;
     }
+
 }
 
-function removeElementIfConditionsTrue(el, callback) {
-    callback(el); {
-    } if (el === true) {
-        el[i].remove();
-    }
-}
 
+function removeElementIfConditionsTrue(arr, callback) {
+    var el = document.getElementsByTagName(arr);
+    for (var i = 0; i < el.length; i++) {
+       if (callback(el[i].className), el[i].className === trut) {
+          
+           el[i].remove();
+       }
+        
+    }
+
+}
 var elements = ['input', 'div', 'textarea'];
 removeElementIfConditionsTrue(elements, predicat);

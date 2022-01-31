@@ -179,3 +179,4 @@ function removeElementIfConditionsTrue(arr, callback) {
 }
 var elements = ['input', 'div', 'textarea'];
 removeElementIfConditionsTrue(elements, predicat);
+

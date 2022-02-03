@@ -169,7 +169,8 @@ function predicat(tagName) {
 function removeElementIfConditionsTrue(arr, callback) {
     var el = document.getElementsByTagName(arr);
     for (var i = 0; i < el.length; i++) {
-       if (callback(el[i].className), el[i].className === true) {
+        
+       if () {
           
            el[i].remove();
        }

@@ -1,4 +1,3 @@
-
 var input1El = document.getElementById('input1');
 var input2El = document.getElementById('input2');
 var input3El = document.getElementById('input3');
@@ -157,7 +156,7 @@ function hasClassHey(tagName) {
 //hasClassHey("input");
 
 function predicat(tagName) {
-    var el = document.getElementsByTagName(tagName);
+    var el = document.getElementsByClassName(tagName);
     if (el.className === 'hey') {
         console.log(el.className);
         return true;
@@ -169,15 +168,8 @@ function predicat(tagName) {
 function removeElementIfConditionsTrue(arr, callback) {
     var el = document.getElementsByTagName(arr);
     for (var i = 0; i < el.length; i++) {
-        
-       if () {
-          
-           el[i].remove();
-       }
-        
-    }
-
+        callback(el[i]);
+      }
 }
 var elements = ['input', 'div', 'textarea'];
 removeElementIfConditionsTrue(elements, predicat);
-

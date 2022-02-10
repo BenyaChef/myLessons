@@ -164,13 +164,22 @@ hasClassHey();
 
 let predicat = (el) => el === 'hey';
 
-function removeElementIfConditionsTrue(arr, callback) {
-    let el = document.querySelectorAll(arr);
-    for (let i = 0; i < el.length; i++) {
-        if (callback(el[i].className)) {
-            el[i].remove();
-        }
-    }
+// function removeElementIfConditionsTrue(arr, callback) {
+//     let el = document.querySelectorAll(arr);
+//     for (let i = 0; i < el.length; i++) {
+//         if (callback(el[i].className)) {
+//             el[i].remove();
+//         }
+//     }
+// }
+
+function removeElementIfConditionsTrue(arr, checkClass) {
+    let elementArray = document.querySelectorAll(arr);
+    elementArray.forEach((item) => {
+       if  (checkClass(item.className)) {
+           item.remove();
+       }
+    });
 }
 var elements = ['input', 'div', 'textarea'];
 removeElementIfConditionsTrue(elements, predicat);

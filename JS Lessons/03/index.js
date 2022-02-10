@@ -153,26 +153,23 @@ function hasClassHey(tagName) {
     }
 }
 
-//hasClassHey("input");
+hasClassHey();
 
-function predicat(tagName) {
-    var el = document.getElementsByClassName(tagName);
-    if (el.className === 'hey') {
-        console.log(el.className);
-        return true;
-    }
 
-}
 
+
+
+
+
+
+let predicat = (el) => el === 'hey';
 
 function removeElementIfConditionsTrue(arr, callback) {
-    var el = document.getElementsByTagName(arr);
-    for (var i = 0; i < el.length; i++) {
-        callback(el[i]);
-        if (el[i].className){
-            el[i].remove();
+    let el = document.querySelectorAll(arr);
+    for (let i = 0; i < el.length; i++) {
+        if (callback(el[i].className)) {
+            document.querySelector(`.${el[i].className}`).remove();
         }
-
     }
 }
 var elements = ['input', 'div', 'textarea'];

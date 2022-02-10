@@ -168,7 +168,7 @@ function removeElementIfConditionsTrue(arr, callback) {
     let el = document.querySelectorAll(arr);
     for (let i = 0; i < el.length; i++) {
         if (callback(el[i].className)) {
-            document.querySelector(`.${el[i].className}`).remove();
+            el[i].remove();
         }
     }
 }

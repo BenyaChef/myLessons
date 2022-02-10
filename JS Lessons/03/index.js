@@ -167,7 +167,13 @@ function predicat(tagName) {
 
 function removeElementIfConditionsTrue(arr, callback) {
     var el = document.getElementsByTagName(arr);
-    el.forEach(callback());
+    for (var i = 0; i < el.length; i++) {
+        callback(el[i]);
+        if (el[i].className){
+            el[i].remove();
+        }
+
+    }
 }
 var elements = ['input', 'div', 'textarea'];
 removeElementIfConditionsTrue(elements, predicat);

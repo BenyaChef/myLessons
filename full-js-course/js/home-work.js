@@ -19,3 +19,13 @@ personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB);
+
+console.log( NaN && 2 && undefined );
+
+console.log( 1 && 2 && 3 );
+console.log( !1 && 2 || !3 );
+console.log( 25 || null && !3 );
+
+
+
+

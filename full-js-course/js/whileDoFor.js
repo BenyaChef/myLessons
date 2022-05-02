@@ -1,6 +1,6 @@
 'use strict';
 
-let num = 50;
+let num = 20;
 
 // while (num <= 55) { //условие!
 //     console.log(num);// пока условие не выполнено выполняй такие действия!
@@ -13,7 +13,10 @@ let num = 50;
 // }
 // while (num < 55);
 
-for (let i = 1; i < 8; i++) {
+for (let i = 1; i <= 11; i++) {
+    if (num === 13) {
+        break;
+    }
     console.log(num);
-    num++;
+    num--;
 }

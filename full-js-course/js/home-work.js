@@ -25,7 +25,7 @@ for(let i = 0; i < 2; i++) {
    
 }
 
-console.log(personalMovieDB);
+
 
     if (personalMovieDB.count < 10) {
         console.log('Вы просмотрели очень мало фильмов');
@@ -37,7 +37,7 @@ console.log(personalMovieDB);
           console.log('Ошибка');
       }
 
-
+      console.log(personalMovieDB);
 
 
 

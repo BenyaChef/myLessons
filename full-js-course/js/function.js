@@ -80,3 +80,55 @@ function calculateVolumeAndArea(facet) {
 }
 
 calculateVolumeAndArea(10);
+
+
+function getCoupeNumber(number) {
+    if (typeof(number) !== 'number' || number < 0 || !Number.isInteger(number)) {
+        console.log('Ошибка. Проверьте правильность введёного номера!');
+    }
+
+    if (number === 0 || number > 36) {
+        console.log('Таких мест в вагоне не существует!');
+    }
+
+    for (let i = 0; i <= 36; i = i + 4) {
+        if ( number <= i) {
+            console.log(Math.ceil(i / 4));
+        }
+    }
+
+}
+
+getCoupeNumber(24);
+
+function getTimeFromMinutes(minutesTotal) {
+    if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) {
+        return 'Ошибка, проверьте данные';
+    }
+
+    const hours = Math.floor(minutesTotal / 60);
+    const minutes = minutesTotal % 60;
+
+    let hoursStr = '';
+
+    switch (hours) {
+        case 0:
+            hoursStr = 'часов';
+            break;
+        case 1:
+            hoursStr = 'час';
+            break;  
+        case 2:     
+        case 3:     
+        case 4:
+            hoursStr = 'часа';
+            break;
+        default:
+            hoursStr = 'часов';    
+
+    }
+
+    console.log(`Это ${hours} ${hoursStr} и ${minutes} минут`);
+}
+
+getTimeFromMinutes('');

@@ -68,3 +68,15 @@ function getMathResult(num, times) {
 }
 
 getMathResult(10, 5);
+
+function calculateVolumeAndArea(facet) {
+    if (typeof(facet) !== 'number' || facet < 0 || !Number.isInteger(facet)) {
+        return console.log('При вычисление произошла ошибка!');
+    }
+    const V = facet * facet * facet;
+    const S = 6 * (facet * facet);
+    console.log(`объём куба: ${V}, плащадь всей поверхности: ${S}`);
+    
+}
+
+calculateVolumeAndArea(10);

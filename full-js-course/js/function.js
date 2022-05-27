@@ -172,4 +172,4 @@ function fib(num) {
     console.log(result);
 }
 
-fib(10);
+fib(40);

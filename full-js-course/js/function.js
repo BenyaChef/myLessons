@@ -132,3 +132,44 @@ function getTimeFromMinutes(minutesTotal) {
 }
 
 getTimeFromMinutes('');
+
+function findMaxNumber(a, b, c, d) {
+    if (typeof(a) !== 'number' ||
+        typeof(b) !== 'number' ||
+        typeof(c) !== 'number' ||
+        typeof(d) !== 'number' ) {
+        return 0;
+    } else {
+        console.log (Math.max(a, b, c, d));
+    }
+}
+
+findMaxNumber(56, 75, 37, 57);
+
+
+function fib(num) {
+    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+        return "";
+    }
+
+    let result = '';
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if (i + 1 === num) {
+            result += `${first}`;
+            // Без пробела в конце
+        } else {
+            result += `${first} `;
+        }
+
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+
+    console.log(result);
+}
+
+fib(10);
